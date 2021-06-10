@@ -39,16 +39,10 @@ if (function_exists('wp_body_open')) {
     <header id="overhead" role="banner">
         <div class="empty-space"></div>
         <div class="logo-nav">
-            <?php if (get_theme_mod('wp_bootstrap_starter_logo')): ?>
-                <a href="<?php echo esc_url(home_url('/')); ?>">
-                    <img src="<?php echo esc_url(get_theme_mod('wp_bootstrap_starter_logo')); ?>"
-                         alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
-                </a>
-            <?php else : ?>
-                <a class="site-title"
-                   href="<?php echo esc_url(home_url('/')); ?>"><?php esc_url(bloginfo('name')); ?></a>
-            <?php endif; ?>
-
+            <a href="<?php echo esc_url(home_url('/')); ?>">
+                <img src="<?php echo get_bloginfo('template_url') ?>/images/full_logo.png"
+                     alt="<?php echo esc_attr(get_bloginfo('name')); ?>">
+            </a>
         </div>
         <svg id="wave" style="transform:rotate(180deg); transition: 0.3s" viewBox="0 0 1440 190" version="1.1"
              xmlns="http://www.w3.org/2000/svg">
@@ -65,41 +59,50 @@ if (function_exists('wp_body_open')) {
 
     <?php if (is_front_page() && !get_theme_mod('header_banner_visibility')): ?>
         <div id="page-sub-header">
-            <div class="container flex flex-end">
-                <div class="circle-card card-1" tabindex="0">
-                    <span class="card-icon">
-                        <i class="fa fa-laptop-code"></i>
-                    </span>
-                    <h1 class="card-title">This is a title</h1>
-                    <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
-                        remember</p>
-                </div>
+            <div class="container flex">
+                <div class="flex-item eight containers">
+                    <div class="card-container">
+                        <div class="circle-card card-1" tabindex="0">
+                            <span class="card-icon">
+                                <i class="fa fa-laptop-code"></i>
+                            </span>
+                            <h3 class="card-title">Työt</h3>
+                            <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
+                                remember</p>
+                        </div>
 
-                <div class="circle-card card-2" tabindex="0">
-                    <span class="card-icon">
-                        <i class="fa fa-graduation-cap"></i>
-                    </span>
-                    <h1 class="card-title">This is a title</h1>
-                    <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
-                        remember</p>
-                </div>
+                        <div class="circle-card card-2" tabindex="0">
+                            <span class="card-icon">
+                                <i class="fa fa-graduation-cap"></i>
+                            </span>
+                            <h3 class="card-title">Koulutus</h3>
+                            <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
+                                remember</p>
+                        </div>
 
-                <div class="circle-card card-3" tabindex="0">
-                    <span class="card-icon">
-                        <i class="fa fa-cat"></i>
-                    </span>
-                    <h1 class="card-title">This is a title</h1>
-                    <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
-                        remember</p>
+                        <div class="circle-card card-3" tabindex="0">
+                            <span class="card-icon">
+                                <i class="fa fa-cat"></i>
+                            </span>
+                            <h3 class="card-title">Vapaa-aika</h3>
+                            <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
+                                remember</p>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img class="sub-header-image" src="<?php echo get_bloginfo('template_url') ?>/images/both_car.png"
+                             alt="Kissat autoilemassa">
+                    </div>
                 </div>
-
-                <div class="square-card" tabindex="0">
-                    <span class="card-icon">
-                        <i class="fa fa-cat"></i>
-                    </span>
-                    <h1 class="card-title">This is a title</h1>
-                    <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
-                        remember</p>
+                <div class="flex-item flex-center four">
+                    <div class="square-card" tabindex="0">
+                        <div class="circle-icon">
+                            <img class="own-image" src="<?php echo get_bloginfo('template_url') ?>/images/omakuva.jpg">
+                        </div>
+                        <h2 class="card-title">Hi! I'm Roosa</h2>
+                        <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
+                            remembasdasdasdaer</p>
+                    </div>
                 </div>
             </div>
             <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>

@@ -67,7 +67,14 @@ video {
   display: inline-block;
   vertical-align: baseline;
 }
-
+@font-face {
+  font-family: 'Source Code Pro';
+  src: url('fonts/SourceCodePro-Medium.woff2') format('woff2'),
+  url('fonts/SourceCodePro-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
 audio:not([controls]) {
   display: none;
   height: 0;
@@ -219,19 +226,22 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   margin-top: 24px;
   margin-bottom: 15px;
+  font-family: "Source Code Pro", sans-serif;
 }
 h1 {
-  font-size: 32px;
+  font-size: 28px;
   padding-bottom: 10px;
 }
 h2 {
   font-size: 24px;
   padding-bottom: 0.3em;
   line-height: 1.25;
+  color: #ae3a3a;
 }
 h3 {
   font-size: 18px;
   line-height: 25px;
+  color: #67976a;
 }
 h4 {
   font-size: 16px;
@@ -302,6 +312,9 @@ header#overhead{
 .flex-end{
   justify-content: flex-end;
 }
+.flex-center{
+  justify-content: center;
+}
 .full {
    width: 100%;
  }
@@ -327,7 +340,7 @@ header#overhead{
 svg {
   display: inline-block;
   position: absolute;
-  top: 97px;
+  top: 95px;
   left: 0;
   z-index: 5;
 }
@@ -341,7 +354,7 @@ svg {
   z-index: 10;
   display: block;
   position: absolute;
-  top: 30px;
+  top: 0px;
   left: 30px;
 }
 
@@ -359,39 +372,103 @@ svg {
 }
 
 .logo-nav > a > img {
-  max-height: 100px;
+  height: 120px;
+  margin: 20px;
 }
-@media (min-width: 1000px) {
-  svg{
-    top: 77px;
-  }
-  .empty-space{
-    height: 80px;
-  }
+
+@media (min-width: 1200px) {
   .logo-nav > a > img {
-    max-height: 140px;
+    height: 175px;
   }
 }
 
 .circle-card{
-  clip-path: circle(10% at 50% 15%);
+  clip-path: circle(10% at 50% 22%);
   transition: all ease-in-out .3s;
   z-index: 10;
   padding:42px 32px;
   background-color: #ead9be;
-  width: 300px;
+  width: 270px;
+  margin: 0 15px;
   position: absolute;
 }
+.card-container{
+  position: relative;
+  height: 200px;
+}
 
-@media (min-width: 1000px) {
-  .card-1 {
-    left: 10%;
+.card-1 > .card-icon{
+  margin-left: -84%;
+}
+.card-3 > .card-icon{
+  margin-left: 84%;
+}
+
+.card-1 {
+  clip-path: circle(10% at 18% 22%);
+}
+.card-2{
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+.card-3 {
+  clip-path: circle(10% at 82% 22%);
+  left: auto;
+  right: 0;
+}
+
+
+@media (max-width: 1000px) {
+  svg{
+    top: 99px;
   }
-  .card-2 {
-    left: 20%;
+  .four{
+    width: 100%;
   }
-  .card-3 {
-    left: 30%;
+  .eight{
+    width: 100%;
+  }
+}
+.image-container{
+  width: 100%;
+  height: 200px;
+  position: relative;
+}
+.sub-header-image{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+.containers{
+  height: 400px;
+}
+@media (max-width: 750px) {
+  svg{
+    top: 95px;
+  }
+  .logo-nav > a > img {
+    height: 110px;
+  }
+
+  .image-container{
+    height:200px;
+  }
+  .card-container{
+    height:100px;
+  }
+  .containers{
+    height: 300px;
+  }
+}
+@media (max-width: 600px) {
+  svg{
+    top: 95px;
+  }
+  .logo-nav > a > img {
+    height: 90px;
+    margin-left: -5px;
   }
 }
 
@@ -403,12 +480,14 @@ svg {
   0px 3px 18px rgba(0,0,0,0.08),0px 3px 9px rgba(0,0,0,0.12),
   0px 3px 18px rgba(0,0,0,0.08);
   outline:none;
+  z-index: 15;
 }
 
 .circle-card:focus{
   box-shadow: 0px 3px 9px rgba(0,0,0,0.12),
   0px 3px 18px rgba(0,0,0,0.08),0px 3px 9px rgba(0,0,0,0.12),
   0px 3px 18px rgba(0,0,0,0.08);
+  z-index: 15;
 }
 .card-icon{
   font-size: 30px;
@@ -419,18 +498,34 @@ svg {
   color: #4f2828;
 }
 .card-description{
-
+  font-size: 18px!important;
 }
 .card-title{
-
+  font-size: 24px !important;
 }
 
 .square-card{
-  background-color: #79ab7b;
+  background-color: #8db48e;
   padding: 20px;
-  width: 300px;
   height: 450px;
+  margin: 20px auto;
+
   border-radius: 5px;
+}
+
+.circle-icon{
+  overflow: hidden;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto;
+}
+
+.own-image{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 #page-sub-header {
@@ -444,6 +539,10 @@ svg {
 @media (min-width: 1000px) {
   #page-sub-header {
     padding-top: 10rem;
+  }
+}
+@media (max-width: 1000px) {
+  .square-card{
   }
 }
 body:not(.theme-preset-active) #page-sub-header h1 {
