@@ -383,12 +383,12 @@ svg {
 }
 
 .circle-card{
-  clip-path: circle(10% at 50% 22%);
+  clip-path: circle(10% at 50% 15%);
   transition: all ease-in-out .3s;
   z-index: 10;
   padding:42px 32px;
   background-color: #ead9be;
-  width: 270px;
+  width: 300px;
   margin: 0 15px;
   position: absolute;
 }
@@ -405,7 +405,7 @@ svg {
 }
 
 .card-1 {
-  clip-path: circle(10% at 18% 22%);
+  clip-path: circle(10% at 17% 15%);
 }
 .card-2{
   left: 0;
@@ -413,7 +413,7 @@ svg {
   margin: 0 auto;
 }
 .card-3 {
-  clip-path: circle(10% at 82% 22%);
+  clip-path: circle(10% at 83% 15%);
   left: auto;
   right: 0;
 }
@@ -498,7 +498,8 @@ svg {
   color: #4f2828;
 }
 .card-description{
-  font-size: 18px!important;
+  font-size: 15px!important;
+  font-family: "Source Code Pro", sans-serif;
 }
 .card-title{
   font-size: 24px !important;
@@ -935,6 +936,10 @@ a img.aligncenter {
   display: inline-block;
 }
 
+.widget_meta{
+  display:none;
+}
+
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
@@ -943,7 +948,7 @@ a img.aligncenter {
 --------------------------------------------------------------*/
 #content.site-content {
   padding-bottom: 3.75rem;
-  padding-top: 4.125rem;
+  padding-top: 10rem;
 }
 
 .sticky .entry-title::before {
@@ -1188,6 +1193,24 @@ object {
 /*--------------------------------------------------------------
 # Footer
 --------------------------------------------------------------*/
+#icons {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 99;
+}
+#github_img, #linkedin {
+  margin-left: 10px;
+  height: 3em;
+  width: auto;
+}
+#github_img:hover, #linkedin:hover {
+  filter: brightness(80%);
+}
+#icons > a {
+  text-decoration: none;
+}
+
 footer#colophon {
   font-size: 85%;
 }

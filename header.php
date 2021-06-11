@@ -66,27 +66,27 @@ if (function_exists('wp_body_open')) {
                             <span class="card-icon">
                                 <i class="fa fa-laptop-code"></i>
                             </span>
-                            <h3 class="card-title">Työt</h3>
-                            <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
-                                remember</p>
+                            <h3 class="card-title">Work</h3>
+                            <p class="card-description">Currently I'm Junior Software Developer at Louhos Digital. I specialize in backend and I'm most familiar with PHP as main language.
+                            I also have work experience as a frontend developer and I have worked with Groovy and Python as main languages</p>
                         </div>
 
                         <div class="circle-card card-2" tabindex="0">
                             <span class="card-icon">
                                 <i class="fa fa-graduation-cap"></i>
                             </span>
-                            <h3 class="card-title">Koulutus</h3>
-                            <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
-                                remember</p>
+                            <h3 class="card-title">Education</h3>
+                            <p class="card-description">I started University of Turku (UTU) in 2017 with Mathematics as my major, in 2018 I changed my major to Computer Science.
+                                I finished my Bachelor's Degree in Computer Science in 2020 and I am currently studying to get a Master's Degree in Software Engineering.</p>
                         </div>
 
                         <div class="circle-card card-3" tabindex="0">
                             <span class="card-icon">
                                 <i class="fa fa-cat"></i>
                             </span>
-                            <h3 class="card-title">Vapaa-aika</h3>
-                            <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
-                                remember</p>
+                            <h3 class="card-title">Freetime</h3>
+                            <p class="card-description">On my freetime I work as Business Coordinator for Asteriski ry, a student organization for Computer Science students in UTU.
+                                Besides spending my time in student events and meetings, I like to do small personal projects from drawing pixel art to doing code puzzles.</p>
                         </div>
                     </div>
                     <div class="image-container">
@@ -100,15 +100,20 @@ if (function_exists('wp_body_open')) {
                             <img class="own-image" src="<?php echo get_bloginfo('template_url') ?>/images/omakuva.jpg">
                         </div>
                         <h2 class="card-title">Hi! I'm Roosa</h2>
-                        <p class="card-description">Lorem ipsum dolor sit amet and this is all the lorem ipsum text I
-                            remembasdasdasdaer</p>
+                        <p class="card-description">I'm a Software Developer dedicated to learn the secrets of IT World! When I'm not a developer, I'm an active face in Asteriski ry, a student organization for Computer Science.</p>
                     </div>
                 </div>
             </div>
             <a href="#content" class="page-scroller"><i class="fa fa-fw fa-angle-down"></i></a>
         </div>
     <?php endif; ?>
+    <?php if (is_front_page() && !get_theme_mod('header_banner_visibility')): ?>
+    <div id="content" class="site-content" style="padding-top: 4.5rem">
+        <div class="container">
+            <div class="row">
+    <?php else : ?>
     <div id="content" class="site-content">
         <div class="container">
             <div class="row">
+    <?php endif; ?>
 <?php endif; ?>
