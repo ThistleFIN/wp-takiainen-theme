@@ -67,7 +67,7 @@ if (function_exists('wp_body_open')) {
                                 <i class="fa fa-laptop-code"></i>
                             </span>
                             <h3 class="card-title">Work</h3>
-                            <p class="card-description">Currently I'm Junior Software Developer at Louhos Digital. I specialize in backend and I'm most familiar with PHP as main language.
+                            <p class="card-description">Currently I'm Software Developer at Louhos Digital. I specialize in backend and I'm most familiar with PHP as main language.
                             I also have work experience as a frontend developer and I have worked with Groovy and Python as main languages</p>
                         </div>
 
